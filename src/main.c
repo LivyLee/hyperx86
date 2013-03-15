@@ -43,6 +43,9 @@ int main(int argc, char* argv[])
     
     /* dump registers */
     cpu_dump_registers();
+    
+    /* load bios image */
+    bios_load(BIOS_PATH);
 
     /* map bios file to ram, yadda, yadda, todooo */
     DIE("incomplete");

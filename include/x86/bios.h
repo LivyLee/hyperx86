@@ -25,14 +25,11 @@
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef _x86_x86_h_
-#define _x86_x86_h_
+#ifndef hyperx86_bios_h
+#define hyperx86_bios_h
 
 #pragma once
 
-#include "registers.h"
-#include "ram.h"
-#include "cpu.h"
-#include "bios.h"
+extern void bios_load __P((const char* restrict));
 
 #endif

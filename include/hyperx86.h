@@ -49,6 +49,13 @@
 
 #include <assert.h>
 
+#include <fcntl.h>
+
+#include <sys/stat.h>
+
+#define BIOS_PATH "/Users/rms/hyperx86/roms/bios.bin"
+#warning Remember to change BIOS_PATH to fit your system requirements!!!
+
 #ifndef __BEGIN_DECLS
 #ifndef __END_DECLS
 #if defined(__cplusplus)

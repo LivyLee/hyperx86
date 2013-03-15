@@ -25,14 +25,49 @@
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef _x86_x86_h_
-#define _x86_x86_h_
+#include "hyperx86.h"
 
-#pragma once
+__BEGIN_DECLS
 
-#include "registers.h"
-#include "ram.h"
-#include "cpu.h"
-#include "bios.h"
+void bios_load(const char* restrict filename)
+{
+    int fd, err;
+    off_t size;
+    struct stat buf;
+    char *bios;
+    
+    fd = open(filename, O_RDONLY);
+    if(fd <= -1) {
+        char cwd[512];
+        getcwd(cwd, 512);
+        perror("open");
+        DIE("Fatal error loading BIOS image from %s (cwd: %s)\n", filename, cwd);
+    }
+    
+    err = stat(filename, &buf);
+    if(err <= -1) {
+        perror("stat");
+        DIE("Fatal error during stat() of BIOS image\n");
+    }
+    
+    size = buf.st_size;
+    
+    if(size > 65536) {
+        DIE("Size of ROM image is WAY TOO LARGE BRO.\n");
+    }
+    
+    bios = malloc(size);
+    if(!bios) {
+        DIE("Failed to allocate memory for bios\n");
+    }
+    
+    bzero(bios, size);
+    read(fd, bios, size);
+    
+    bcopy(bios, (void*)(emulated_ram + RAM_SIZE - size), size);
 
-#endif
+    free(bios);
+    close(fd);
+}
+
+__END_DECLS
