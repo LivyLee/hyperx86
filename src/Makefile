@@ -1,6 +1,6 @@
 
 TARGET		= hyperx86
-OBJECTS		= main.o ram_emulation.o cpu.c
+OBJECTS		= main.o ram_emulation.o cpu.o biosldr.o
 CFLAGS		= -O2 -g -pipe -march=native
 LDFLAGS		=
 CPPFLAGS	= -I../include
@@ -15,4 +15,4 @@ $(TARGET): $(OBJECTS)
 	$(CC) $(CPPFLAGS) $(CFLAGS) -c -o $@ $<
 	
 clean:
-	rm -f $(OBJECTS) $(TARGET)
+	rm -f $(OBJECTS) $(TARGET) *.dSYM
