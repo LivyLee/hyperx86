@@ -129,6 +129,11 @@ typedef struct {
         uint32_t    _long;
         uint16_t    _short;
     } src_value;
+    
+    gpr_t           eip;    /*
+                             * somehow, i managed to forget the instruction
+                             * pointer O_o. 
+                             */
 
     uint32_t        data_segment;
     uint32_t        data_type;

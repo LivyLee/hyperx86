@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D8B5520F16F38FB8007E3CE9 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = D8B5520E16F38FB8007E3CE9 /* main.c */; };
 		D8B5521116F38FDF007E3CE9 /* ram_emulation.c in Sources */ = {isa = PBXBuildFile; fileRef = D8B5521016F38FDF007E3CE9 /* ram_emulation.c */; };
+		D8B5521D16F395C4007E3CE9 /* cpu.c in Sources */ = {isa = PBXBuildFile; fileRef = D8B5521C16F395C4007E3CE9 /* cpu.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +35,8 @@
 		D8B5521916F38FEC007E3CE9 /* ram.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ram.h; sourceTree = "<group>"; };
 		D8B5521A16F38FEC007E3CE9 /* registers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = registers.h; sourceTree = "<group>"; };
 		D8B5521B16F38FEC007E3CE9 /* x86.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = x86.h; sourceTree = "<group>"; };
+		D8B5521C16F395C4007E3CE9 /* cpu.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = cpu.c; path = src/cpu.c; sourceTree = SOURCE_ROOT; };
+		D8B5521E16F396C5007E3CE9 /* cpu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cpu.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +72,7 @@
 			children = (
 				D8B5521016F38FDF007E3CE9 /* ram_emulation.c */,
 				D8B5520E16F38FB8007E3CE9 /* main.c */,
+				D8B5521C16F395C4007E3CE9 /* cpu.c */,
 			);
 			name = src;
 			path = hyperx86;
@@ -100,6 +104,7 @@
 				D8B5521916F38FEC007E3CE9 /* ram.h */,
 				D8B5521A16F38FEC007E3CE9 /* registers.h */,
 				D8B5521B16F38FEC007E3CE9 /* x86.h */,
+				D8B5521E16F396C5007E3CE9 /* cpu.h */,
 			);
 			path = x86;
 			sourceTree = "<group>";
@@ -157,6 +162,7 @@
 			files = (
 				D8B5520F16F38FB8007E3CE9 /* main.c in Sources */,
 				D8B5521116F38FDF007E3CE9 /* ram_emulation.c in Sources */,
+				D8B5521D16F395C4007E3CE9 /* cpu.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

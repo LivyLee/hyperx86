@@ -1,10 +1,10 @@
 
 TARGET		= hyperx86
-OBJECTS		= main.o ram_emulation.o
+OBJECTS		= main.o ram_emulation.o cpu.c
 CFLAGS		= -O2 -g -pipe -march=native
 LDFLAGS		=
 CPPFLAGS	= -I../include
-CC			= clang
+CC		= clang
 
 all:	$(TARGET)
 

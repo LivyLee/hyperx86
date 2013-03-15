@@ -37,8 +37,15 @@ int main(int argc, char* argv[])
     
     /* verify ram subsystems */
     ram_subsystem_verify_functionality();
+    
+    /* cpu core init */
+    cpu_subsystem_initialize();
+    
+    /* dump registers */
+    cpu_dump_registers();
 
     /* map bios file to ram, yadda, yadda, todooo */
+    DIE("incomplete");
     
     return 0;
 }

@@ -67,6 +67,12 @@
 #endif
 #endif
 
+#define DIE(...)                \
+    do {                        \
+        printf(__VA_ARGS__);    \
+        exit(-1);               \
+    } while(0);
+
 /* Hyperx86 includes */
 #include "x86/x86.h"
 #include "debug/debug.h"

@@ -1,5 +1,8 @@
 *~
+.DS_Store
 a.out
+*.xcworkspace*
+*xcuserdata*
 hyperx86
 *.o
 *.a

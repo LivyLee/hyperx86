@@ -25,13 +25,12 @@
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef _x86_x86_h_
-#define _x86_x86_h_
+#ifndef hyperx86_cpu_h
+#define hyperx86_cpu_h
 
 #pragma once
 
-#include "registers.h"
-#include "ram.h"
-#include "cpu.h"
+extern void cpu_subsystem_initialize __P((void));
+extern void cpu_dump_registers __P((void));
 
 #endif
