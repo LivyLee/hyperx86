@@ -1,0 +1,12 @@
+*~
+a.out
+hyperx86
+*.o
+*.a
+*.d
+*.dSYM
+*.exe
+*.dll
+*.obj
+*.lib
+*.dylib
