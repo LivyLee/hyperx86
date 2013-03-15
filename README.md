@@ -2,7 +2,7 @@
 
 <pre>
  __________________________
-< A portable x86 emulator! >
+| A portable x86 emulator! |
  --------------------------
         \   ^__^
          \  (oo)\_______
