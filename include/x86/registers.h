@@ -105,6 +105,7 @@ typedef struct {
     uint16_t            segment_limits[6];
 
     uint16_t            destination_segment;
+    uint16_t            current_segment;
 
     union {
         uint8_t     *dst_byte;

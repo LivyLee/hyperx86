@@ -46,6 +46,9 @@ int main(int argc, char* argv[])
     
     /* load bios image */
     bios_load(BIOS_PATH);
+    
+    /* run it */
+    cpu_begin_emulation();
 
     /* map bios file to ram, yadda, yadda, todooo */
     DIE("incomplete");

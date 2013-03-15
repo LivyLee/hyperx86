@@ -11,6 +11,7 @@
 		D8B5521116F38FDF007E3CE9 /* ram_emulation.c in Sources */ = {isa = PBXBuildFile; fileRef = D8B5521016F38FDF007E3CE9 /* ram_emulation.c */; };
 		D8B5521D16F395C4007E3CE9 /* cpu.c in Sources */ = {isa = PBXBuildFile; fileRef = D8B5521C16F395C4007E3CE9 /* cpu.c */; };
 		D8B5522016F39D43007E3CE9 /* biosldr.c in Sources */ = {isa = PBXBuildFile; fileRef = D8B5521F16F39D43007E3CE9 /* biosldr.c */; };
+		D8B5522316F3A98B007E3CE9 /* x86table.c in Sources */ = {isa = PBXBuildFile; fileRef = D8B5522216F3A98B007E3CE9 /* x86table.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,6 +41,7 @@
 		D8B5521E16F396C5007E3CE9 /* cpu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cpu.h; sourceTree = "<group>"; };
 		D8B5521F16F39D43007E3CE9 /* biosldr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = biosldr.c; path = src/biosldr.c; sourceTree = SOURCE_ROOT; };
 		D8B5522116F39F8D007E3CE9 /* bios.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bios.h; sourceTree = "<group>"; };
+		D8B5522216F3A98B007E3CE9 /* x86table.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = x86table.c; path = src/x86table.c; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				D8B5520E16F38FB8007E3CE9 /* main.c */,
 				D8B5521C16F395C4007E3CE9 /* cpu.c */,
 				D8B5521F16F39D43007E3CE9 /* biosldr.c */,
+				D8B5522216F3A98B007E3CE9 /* x86table.c */,
 			);
 			name = src;
 			path = hyperx86;
@@ -169,6 +172,7 @@
 				D8B5521116F38FDF007E3CE9 /* ram_emulation.c in Sources */,
 				D8B5521D16F395C4007E3CE9 /* cpu.c in Sources */,
 				D8B5522016F39D43007E3CE9 /* biosldr.c in Sources */,
+				D8B5522316F3A98B007E3CE9 /* x86table.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

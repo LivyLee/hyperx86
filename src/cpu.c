@@ -103,4 +103,24 @@ void cpu_dump_registers(void)
            emulation_context.eflags.NT ? '2' : '-');
 }
 
+void cpu_begin_emulation(void)
+{
+    while(1) {
+        uint8_t code_byte;
+        uint32_t segmented_address;
+        
+        segmented_address = (emulation_context.eip) + (emulation_context.current_segment << 4);
+        segmented_address &= 0xF0000;
+        
+        code_byte = get_byte_from_ram(emulation_context.eip);
+        
+        DPRINT("<0x%08x>: %s\n", emulation_context.eip, opcode_table_1[code_byte]);
+
+        emulation_context.eip++;        
+    }
+    
+    /* we never return. ever. */
+    return;
+}
+
 __END_DECLS
