@@ -1,6 +1,6 @@
 
 TARGET		= hyperx86
-OBJECTS		= main.o ram_emulation.o cpu.o biosldr.o
+OBJECTS		= main.o ram_emulation.o cpu.o biosldr.o x86table.o
 CFLAGS		= -O2 -g -pipe -march=native
 LDFLAGS		=
 CPPFLAGS	= -I../include
